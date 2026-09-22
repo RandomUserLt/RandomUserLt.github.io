@@ -1,27 +1,185 @@
 <!DOCTYPE html>
-
 <html lang="fr">
-
-  <head>
-
-<meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width,initial-scale=1.0">
-    <title> Emmanuelle MBOUDO - PORTFOLIO</title>
-
-    
-  </head>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Emmanuelle Mboudo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+        header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+        nav {
+            background: #34495e;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+        section {
+            background: #fff;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        .project, .experience {
+            margin-bottom: 1.5rem;
+        }
+        .project h3, .experience h3 {
+            margin-bottom: 0.2rem;
+            color: #2980b9;
+        }
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+</head>
 <body>
-<h1> Bonjour</h1>
 
-  <p> M2 GLIA</p>
+    <header>
+        <h1>Emmanuelle Mboudo</h1>
+        <p>Master Génie Logiciel et Intégrations d'Applications</p>
+    </header>
 
-  <h2> Mes Projets</h2>
+    <nav>
+        <a href="#profil">Profil</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+        <a href="#experience">Expérience</a>
+        <a href="#formation">Formation</a>
+    </nav>
 
-  <h2> Mon CV</h2>
-  
+    <div class="container">
+        <section id="profil">
+            <h2>Profil</h2>
+            <p>Étudiante en Master Génie Logiciel et Intégration d'Applications (GLIA) à l'Université Clermont Auvergne, je recherche un stage à partir du mois d'avril 2026. Mes expériences en entreprise m'ont permis de développer un sens du professionnalisme, allié à un bon relationnel, ainsi qu'une grande adaptabilité et autonomie, atouts que je souhaite mettre au service de projets et missions informatiques.</p>
+        </section>
+
+        <section id="competences">
+            <h2>Compétences Techniques</h2>
+            <ul>
+                <li><strong>Langages :</strong> Java, Go, TypeScript, Python, C.</li>
+                <li><strong>Architecture & Back-end :</strong> Microservices, API REST, TDD, NATS.</li>
+                <li><strong>DevOps & Intégration :</strong> Git, CI/CD (GitLab), Docker, Ansible, OpenTofu.</li>
+                <li><strong>Bases de données & Conception :</strong> SQL, MySQL, SQLite, Looping, Gestion de base de données, Système d'information.</li>
+                <li><strong>Systèmes d'exploitation :</strong> Windows, Linux.</li>
+                <li><strong>Front-end :</strong> Angular.</li>
+                <li><strong>Méthodologies & Transverse :</strong> Agile (Scrum), Gestion de la relation client fournisseur.</li>
+            </ul>
+        </section>
+
+        <section id="projets">
+            <h2>Projets Académiques</h2>
+            
+            <div class="project">
+                <h3>Devops Automatisation et CI/CD - 2026</h3>
+                <ul>
+                    <li>Infrastructure as Code (IaC) : provisionnement de machine virtuelle, base de données MySQL et enregistrements DNS avec OpenTofu.</li>
+                    <li>Gestion de configuration : automatisation du déploiement des applications et du reverse proxy Traefik via Ansible.</li>
+                    <li>CI/CD & Conteneurisation : création d'images Docker (Vue.js, Java) et pipelines automatisés de construction et déploiement sous GitLab CI/CD.</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <h3>Middleware Architecture Microservices (Golang) - 2025</h3>
+                <ul>
+                    <li>Architecture distribuée : conception d'une application d'alertes d'emploi du temps structurée en microservices avec Golang.</li>
+                    <li>Développement d'APIs REST : création d'APIs (niveau 2 de Richardson) documentées avec Swagger, intégrant des bases de données SQLite indépendantes.</li>
+                    <li>Asynchronisme et MOM : mise en place de communications inter-services et d'échanges de messages via le broker NATS.</li>
+                    <li>Traitements d'arrière-plan : implémentation de processus (Scheduler et Consumers) pour la synchronisation des données et le déclenchement de notifications.</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <h3>Kata de Refactoring et Évolution Logicielle (Java) - 2025</h3>
+                <ul>
+                    <li>Refactoring sous Git : réduction de la complexité d'une application existante.</li>
+                    <li>Qualité du code : tests unitaires à 100% (JaCoCo) et tests de mutation (PIT).</li>
+                    <li>Évolutions : développement de nouvelles fonctionnalités en approche TDD.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Expérience Professionnelle</h2>
+            <div class="experience">
+                <h3>Développement Full Stack - Saris Congo (Groupe Somdia)</h3>
+                <p><em>Mai 2026 - Juil. 2026 | En présentiel</em></p>
+                <ul>
+                    <li>Recueil de l'existant et analyse du besoin.</li>
+                    <li>Élaboration d'un MCD et d'un schéma de base de données.</li>
+                    <li>Mise en place d'un MVP (Java, Spring Boot, Angular, TypeScript) pour le service médical d'entreprise.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="formation">
+            <h2>Formation & Langues</h2>
+            <ul>
+                <li><strong>2025-Présent :</strong> Master Informatique (Génie Logiciel et Intégration d'Applications) - UCA-INP-ISIMA, Clermont-Ferrand (63).</li>
+                <li><strong>2021-2025 :</strong> Licence Informatique - Université Clermont Auvergne, Clermont-Ferrand (63).</li>
+                <li><strong>2019-2021 :</strong> BTS Gestion de la PME (GPME) - Académie de Créteil (94).</li>
+            </ul>
+            <ul>
+                <li><strong>Anglais :</strong> Niveau B2 (Compréhension technique et conversationnelle).</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>Contact : <a href="mailto:e.mboudo@gmail.com">e.mboudo@gmail.com</a> | +33 07 66 58 48 99</p>
+        <p><a href="https://linkedin.com/in/emmanuelle-m-a13841195" target="_blank">LinkedIn</a> | <a href="https://randomuserlt.github.io/" target="_blank">GitHub</a></p>
+    </footer>
+
 </body>
-
-
 </html>
