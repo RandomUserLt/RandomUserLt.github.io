@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Emmanuelle Mboudo, master’s student in software engineering. Java, Angular, DevOps and distributed systems projects.">
+    <title>Emmanuelle Mboudo | Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+        header, footer {
+            background: #2c3e50;
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        header h1 { margin: 0; font-size: clamp(1.8rem, 5vw, 2.5rem); }
+        header p { margin: 0.5rem 0 0; font-size: 1.2rem; }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem 1.5rem;
+            padding: 1rem;
+            background: #34495e;
+        }
+        nav a, footer a { color: #fff; }
+        nav a, .cv-link { font-weight: bold; }
+        .container { width: min(calc(100% - 2rem), 66rem); margin: auto; padding: 2rem 0; }
+        section {
+            background: #fff;
+            padding: clamp(1rem, 4vw, 2rem);
+            margin-bottom: 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 { margin-top: 0; color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 0.5rem; }
+        ul { list-style-type: square; padding-left: 1.25rem; }
+        .project, .experience { margin-bottom: 1.5rem; }
+        .project:last-child, .experience:last-child { margin-bottom: 0; }
+        .project h3, .experience h3 { margin-bottom: 0.15rem; color: #20638f; }
+        .project p, .experience p { margin: 0.25rem 0; }
+        .meta { color: #4d5965; font-size: 0.95rem; }
+        .github-link, .cv-link { color: #195e86; }
+        footer p { overflow-wrap: anywhere; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Emmanuelle Mboudo</h1>
+        <p>Second-year master’s student in Software Engineering and Application Integration</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <a href="./index.html" lang="fr" hreflang="fr">Version française</a>
+        <a href="#profil">Profile</a>
+        <a href="#competences">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projets">Projects</a>
+        <a href="#formation">Education</a>
+        <a href="#mobilite">Mobility</a>
+    </nav>
+
+    <main class="container">
+        <section id="profil">
+            <h2>Profile</h2>
+            <p>I am a second-year master’s student in Computer Science at Université Clermont Auvergne, specialising in Software Engineering and Application Integration (GLIA). I am looking for a <strong>5–6 month internship in software development or DevOps starting in April 2027</strong>.</p>
+<a class="cv-link" href="./CV_Emmanuelle_Mboudo_EN.pdf" download>Download my English CV (PDF)</a>
+</section>
+
+        <section id="competences">
+            <h2>Technical Skills</h2>
+            <ul>
+<li><strong>Languages</strong> — Java, Go, Python, C, C#, TypeScript, JavaScript, SQL and R.</li>
+<li><strong>Back-End and Software Quality</strong> — Spring Boot, Spring Security, REST APIs, microservices and TDD.</li>
+<li><strong>Front-End</strong> — Angular, Bootstrap, HTML and CSS.</li>
+<li><strong>Data and Messaging</strong> — PostgreSQL, MySQL, SQLite, H2, Apache Kafka and NATS JetStream.</li>
+<li><strong>DevOps</strong> — Git, GitLab CI/CD, Docker, Ansible, OpenTofu, Traefik and OpenBao.</li>
+<li><strong>Operating Systems and Methods</strong> — Linux, Windows and Scrum.</li>
+</ul>
+</section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <article class="experience">
+<h3>Full-Stack Development Intern — SARIS-Congo (Somdia Group)</h3>
+<p class="meta">May to July 2026 · On-site</p>
+<p><strong>Technologies</strong> Java, Spring Boot, Angular, TypeScript, PostgreSQL</p>
+<ul><li>Gathered requirements for the company’s medical service and designed the database.</li>
+<li>Built an MVP to manage patient records, consultations, prescriptions and pharmacy stock.</li></ul>
+</article>
+<article class="experience">
+<h3>Application Development — Univers Numérique Services (UNS)</h3>
+<p class="meta">2025 · Remote · Company based in Pointe-Noire, Republic of the Congo</p>
+<p><strong>Technologies</strong> Java, Angular (SPA), TypeScript, Bootstrap</p>
+<ul><li>Built an electronics inventory that tracks brand, device type, intake date and initial condition.</li>
+<li>Implemented inspection and replacement alerts based on device type.</li></ul>
+</article>
+</section>
+
+        <section id="projets">
+            <h2>Academic Projects</h2>
+            <article class="project">
+                <h3>DevOps and CI/CD — Cloud Infrastructure and Automated Deployment</h3>
+                <p class="meta">2026</p>
+                <p><strong>Technologies</strong> OpenTofu, OVH, MySQL, DNS, Ansible, Docker, Traefik, GitLab CI/CD, OpenBao, Vue.js, Java</p>
+                <p>Provisioned cloud infrastructure, built Docker images and automated deployments. Managed secrets with OpenBao.</p>
+            </article>
+
+            <article class="project">
+                <h3>Middleware and Microservices — Timetable Synchronisation</h3>
+                <p class="meta">2026</p>
+                <p><strong>Technologies</strong> Go, API REST, Swagger, NATS JetStream, SQLite, iCal</p>
+                <p>Synchronised iCal calendars and generated alerts. Used asynchronous messaging, a scheduler and background consumers.</p>
+                <a class="github-link" href="https://github.com/RandomUserLt/PROJET-MIDDLEWARE">View source code on GitHub</a>
+            </article>
+
+            <article class="project">
+                <h3>Java Back-End — REST API for a Donation Platform</h3>
+                <p class="meta">2026</p>
+                <p><strong>Technologies</strong> Java, Spring Boot, Spring Security, H2</p>
+                <p>Built a listings API with a layered architecture and DTOs.</p>
+            </article>
+
+            <article class="project">
+                <h3>Stream Processing — Transaction Processing with Apache Kafka</h3>
+                <p class="meta">2026</p>
+                <p><strong>Technologies</strong> Apache Kafka, Kafka Streams, SQL</p>
+                <p>Validated 600 transactions with exactly-once processing and idempotent database writes using UPSERT.</p>
+            </article>
+
+            <article class="project">
+                <h3>Web and Mobile Development — Podcast App</h3>
+                <p class="meta">2026–present · In progress</p>
+                <p><strong>Technologies</strong> Java, Angular</p>
+                <p>Ongoing CAAS project for listening to podcasts on the web and on mobile devices.</p>
+            </article>
+
+            <article class="project">
+                <h3>Software Quality — Refactoring a Java Application</h3>
+                <p class="meta">2025</p>
+                <p><strong>Technologies</strong> Java, Git, TDD, JaCoCo, PIT</p>
+                <p>Refactored code and added features using TDD. Tracked unit test coverage with JaCoCo and ran mutation tests with PIT.</p>
+                <a class="github-link" href="https://github.com/RandomUserLt/PROJET-GENIE-LOGICIEL-REFACTORING-ET-INTEGRATIONS-DE-NOUVELLES-FONCTIONNALITES">View source code on GitHub</a>
+            </article>
+
+            <article class="project">
+                <h3>Operations Research — Peak Power Optimisation</h3>
+                <p class="meta">2026</p>
+                <p><strong>Technologies</strong> Python, PuLP, CBC, OR-Tools</p>
+                <p>Modelled an assembly line. The exact model reduced peak power by 15–31% compared with the heuristic on the test instances.</p>
+            </article>
+
+            <article class="project">
+                <h3>Data Analysis — Fisheries Data</h3>
+                <p class="meta">2026</p>
+                <p><strong>Technologies</strong> R</p>
+                <p>Analysed a fisheries dataset.</p>
+            </article>
+
+            <article class="project">
+                <h3>Networking and Protocols — Message Transfer Using Visual Encoding</h3>
+                <p class="meta">2025</p>
+                <p>Implemented a message transfer protocol using visual encoding inspired by QR codes.</p>
+            </article>
+
+            <article class="project">
+                <h3>Languages and Compilers — Grammar for Complex Numbers</h3>
+                <p class="meta">2025</p>
+                <p><strong>Technologies</strong> ANTLR</p>
+                <p>Wrote a grammar to parse expressions involving complex numbers.</p>
+            </article>
+
+            <article class="project">
+                <h3>Low-Level Programming — Data Storage and Retrieval</h3>
+                <p class="meta">2025</p>
+                <p><strong>Technologies</strong> Assembly language</p>
+                <p>Wrote a program to store and retrieve items in a database.</p>
+            </article>
+
+            <article class="project">
+                <h3>Computational Complexity — 3-SAT and Graph Problems</h3>
+                <p class="meta">2024</p>
+                <p><strong>Technologies</strong> Python, SageMath</p>
+                <p>Studied polynomial-time reductions from 3-SAT to graph problems.</p>
+            </article>
+
+            <article class="project">
+                <h3>Front-End Development — Client-Side Website</h3>
+                <p class="meta">2023</p>
+                <p><strong>Technologies</strong> HTML, CSS, JavaScript</p>
+                <p>Built a client-side website.</p>
+            </article>
+
+            <article class="project">
+                <h3>Java and SQL Development — Conway’s Game of Life</h3>
+                <p class="meta">2023</p>
+                <p><strong>Technologies</strong> Java, SQL</p>
+                <p>Implemented Conway’s Game of Life with a graphical interface and SQL data storage.</p>
+            </article>
+
+            <article class="project">
+                <h3>Applied Cryptography — Comparing Cryptographic Techniques</h3>
+                <p class="meta">2023</p>
+                <p><strong>Technologies</strong> Python</p>
+                <p>Implemented and compared several cryptographic techniques.</p>
+            </article>
+
+            <article class="project">
+                <h3>Modelling and Simulation — Animal Reproduction</h3>
+                <p class="meta">2023</p>
+                <p><strong>Technologies</strong> C</p>
+                <p>Simulated the reproduction of an animal population using the Fibonacci sequence.</p>
+            </article>
+
+            <article class="project">
+                <h3>Game Development — Ping-Pong</h3>
+                <p class="meta">2023</p>
+                <p><strong>Technologies</strong> Unity, C#</p>
+                <p>Built a ping-pong game in Unity.</p>
+            </article>
+
+            <article class="project">
+                <h3>Game Programming — Sokoban</h3>
+                <p class="meta">2023</p>
+                <p><strong>Technologies</strong> C, Java</p>
+                <p>Built two versions of Sokoban, one in C and one in Java.</p>
+            </article>
+        </section>
+
+        <section id="formation">
+            <h2>Education and Languages</h2>
+            <ul>
+<li><strong>2025–present</strong> — Master’s in Computer Science, Software Engineering and Application Integration (GLIA), Université Clermont Auvergne / ISIMA. First year completed, second year in progress.</li>
+<li><strong>2021–2025</strong> — Bachelor’s degree in Computer Science, Université Clermont Auvergne.</li>
+<li><strong>2019–2021</strong> — BTS in Small and Medium-Sized Enterprise Management, Académie de Créteil.</li>
+<li><strong>English</strong> — B2.</li>
+</ul>
+</section>
+
+        <section id="mobilite">
+            <h2>Mobility</h2>
+            <p>Available primarily in <strong>Île-de-France</strong> and <strong>Auvergne-Rhône-Alpes</strong>. Open to opportunities elsewhere in France and internationally.</p></section>
+
+        <section id="interets">
+            <h2>Interests</h2>
+            <ul><li>3D modelling with Blender and drawing.</li><li>Swimming and fitness.</li></ul></section>
+    </main>
+
+    <footer>
+        <p><a href="mailto:emmanuelle.mboudo@outlook.fr">emmanuelle.mboudo@outlook.fr</a> · <a href="tel:+33766584899">+33 7 66 58 48 99</a></p>
+        <p><a href="https://www.linkedin.com/in/emmanuelle-m-a138a1195/">LinkedIn</a> · <a href="https://github.com/RandomUserLt">GitHub</a></p>
+    </footer>
+</body>
+</html>
