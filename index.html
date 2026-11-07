@@ -3,202 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio d’Emmanuelle Mboudo, étudiante en M2 GLIA. Projets Java, Angular, DevOps et systèmes distribués.">
     <title>Portfolio - Emmanuelle Mboudo</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 0;
             color: #333;
             background-color: #f4f4f9;
         }
-        header {
+        header, footer {
             background: #2c3e50;
             color: #fff;
-            padding: 2rem 0;
+            padding: 2rem 1rem;
             text-align: center;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-        }
+        header h1 { margin: 0; font-size: clamp(1.8rem, 5vw, 2.5rem); }
+        header p { margin: 0.5rem 0 0; font-size: 1.2rem; }
         nav {
-            background: #34495e;
-            color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem 1.5rem;
             padding: 1rem;
-            text-align: center;
+            background: #34495e;
         }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 2rem 0;
-        }
+        nav a, footer a { color: #fff; }
+        nav a, .cv-link { font-weight: bold; }
+        .container { width: min(calc(100% - 2rem), 66rem); margin: auto; padding: 2rem 0; }
         section {
             background: #fff;
-            padding: 2rem;
+            padding: clamp(1rem, 4vw, 2rem);
             margin-bottom: 1.5rem;
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 0.5rem;
-        }
-        ul {
-            list-style-type: square;
-            padding-left: 20px;
-        }
-        .project, .experience {
-            margin-bottom: 1.5rem;
-        }
-        .project h3, .experience h3 {
-            margin-bottom: 0.2rem;
-            color: #2980b9;
-        }
-        .github-link {
-            display: inline-block;
-            margin-bottom: 0.8rem;
-            color: #e74c3c;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-        .github-link:hover {
-            text-decoration: underline;
-        }
-        footer {
-            background: #2c3e50;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
-        }
-        footer a {
-            color: #3498db;
-            text-decoration: none;
-        }
+        h2 { margin-top: 0; color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 0.5rem; }
+        ul { list-style-type: square; padding-left: 1.25rem; }
+        .project, .experience { margin-bottom: 1.5rem; }
+        .project:last-child, .experience:last-child { margin-bottom: 0; }
+        .project h3, .experience h3 { margin-bottom: 0.15rem; color: #20638f; }
+        .project p, .experience p { margin: 0.25rem 0; }
+        .meta { color: #4d5965; font-size: 0.95rem; }
+        .github-link, .cv-link { color: #195e86; }
+        footer p { overflow-wrap: anywhere; }
     </style>
 </head>
 <body>
-
     <header>
         <h1>Emmanuelle Mboudo</h1>
-        <p>Master Génie Logiciel et Intégrations d'Applications</p>
+        <p>M2 Génie logiciel et intégration d’applications</p>
     </header>
 
-    <nav>
+    <nav aria-label="Navigation principale">
         <a href="#profil">Profil</a>
         <a href="#competences">Compétences</a>
+        <a href="#experience">Expériences</a>
         <a href="#projets">Projets</a>
-        <a href="#experience">Expérience</a>
         <a href="#formation">Formation</a>
+        <a href="#mobilite">Mobilité</a>
     </nav>
 
-    <div class="container">
+    <main class="container">
         <section id="profil">
             <h2>Profil</h2>
-            <p>Étudiante en Master Génie Logiciel et Intégration d'Applications (GLIA) à l'Université Clermont Auvergne, je recherche un stage à partir du mois d'avril 2026. Mes expériences en entreprise m'ont permis de développer un sens du professionnalisme, allié à un bon relationnel, ainsi qu'une grande adaptabilité et autonomie, atouts que je souhaite mettre au service de projets et missions informatiques.</p>
+            <p>Étudiante en M2 Informatique, parcours Génie logiciel et intégration d’applications (GLIA) à l’Université Clermont Auvergne, je recherche un <strong>stage de fin d’études de 5 à 6 mois à partir d’avril 2027</strong> en développement logiciel ou DevOps.</p>
+            <a class="cv-link" href="./CV_Emmanuelle_MBOUDO.pdf" download>Télécharger mon CV (PDF)</a>
         </section>
 
         <section id="competences">
-            <h2>Compétences Techniques</h2>
+            <h2>Compétences techniques</h2>
             <ul>
-                <li><strong>Langages :</strong> Java, Go, TypeScript, Python, C.</li>
-                <li><strong>Architecture & Back-end :</strong> Microservices, API REST, TDD, NATS.</li>
-                <li><strong>DevOps & Intégration :</strong> Git, CI/CD (GitLab), Docker, Ansible, OpenTofu.</li>
-                <li><strong>Bases de données & Conception :</strong> SQL, MySQL, SQLite, Looping, Gestion de base de données, Système d'information.</li>
-                <li><strong>Systèmes d'exploitation :</strong> Windows, Linux.</li>
-                <li><strong>Front-end :</strong> Angular.</li>
-                <li><strong>Méthodologies & Transverse :</strong> Agile (Scrum), Gestion de la relation client fournisseur.</li>
+                <li><strong>Langages</strong> — Java, Go, Python, C, C#, TypeScript, JavaScript, SQL et R.</li>
+                <li><strong>Back-end et qualité logicielle</strong> — Spring Boot, Spring Security, API REST, microservices et TDD.</li>
+                <li><strong>Front-end</strong> — Angular, Bootstrap, HTML et CSS.</li>
+                <li><strong>Données et messagerie</strong> — PostgreSQL, MySQL, SQLite, H2, Apache Kafka et NATS JetStream.</li>
+                <li><strong>DevOps</strong> — Git, GitLab CI/CD, Docker, Ansible, OpenTofu, Traefik et OpenBao.</li>
+                <li><strong>Systèmes et méthodes</strong> — Linux, Windows et Scrum.</li>
             </ul>
-        </section>
-
-        <section id="projets">
-            <h2>Projets Académiques</h2>
-            
-            <div class="project">
-                <h3>Devops Automatisation et CI/CD - 2026</h3>
-                <ul>
-                    <li>Infrastructure as Code (IaC) : provisionnement de machine virtuelle, base de données MySQL et enregistrements DNS avec OpenTofu.</li>
-                    <li>Gestion de configuration : automatisation du déploiement des applications et du reverse proxy Traefik via Ansible.</li>
-                    <li>CI/CD & Conteneurisation : création d'images Docker (Vue.js, Java) et pipelines automatisés de construction et déploiement sous GitLab CI/CD.</li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <h3>Middleware Architecture Microservices (Golang) - 2025</h3>
-                <a href="https://github.com/RandomUserLt/PROJET-MIDDLEWARE" target="_blank" class="github-link">Voir le code source sur GitHub</a>
-                <ul>
-                    <li>Architecture distribuée : conception d'une application d'alertes d'emploi du temps structurée en microservices avec Golang.</li>
-                    <li>Développement d'APIs REST : création d'APIs (niveau 2 de Richardson) documentées avec Swagger, intégrant des bases de données SQLite indépendantes.</li>
-                    <li>Asynchronisme et MOM : mise en place de communications inter-services et d'échanges de messages via le broker NATS.</li>
-                    <li>Traitements d'arrière-plan : implémentation de processus (Scheduler et Consumers) pour la synchronisation des données et le déclenchement de notifications.</li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <h3>Kata de Refactoring et Évolution Logicielle (Java) - 2025</h3>
-                <a href="https://github.com/RandomUserLt/PROJET-GENIE-LOGICIEL-REFACTORING-ET-INTEGRATIONS-DE-NOUVELLES-FONCTIONNALITES" target="_blank" class="github-link">Voir le code source sur GitHub</a>
-                <ul>
-                    <li>Refactoring sous Git : réduction de la complexité d'une application existante.</li>
-                    <li>Qualité du code : tests unitaires à 100% (JaCoCo) et tests de mutation (PIT).</li>
-                    <li>Évolutions : développement de nouvelles fonctionnalités en approche TDD.</li>
-                </ul>
-            </div>
         </section>
 
         <section id="experience">
-            <h2>Expérience Professionnelle</h2>
-            <div class="experience">
-                <h3>Développement Full Stack - Saris Congo (Groupe Somdia)</h3>
-                <p><em>Mai 2026 - Juil. 2026 | En présentiel</em></p>
+            <h2>Expériences professionnelles</h2>
+            <article class="experience">
+                <h3>Stage de développement full-stack — SARIS-Congo (Groupe Somdia)</h3>
+                <p class="meta">Mai à juillet 2026 · En présentiel</p>
+                <p><strong>Technologies</strong> Java, Spring Boot, Angular, TypeScript, PostgreSQL</p>
                 <ul>
-                    <li>Recueil de l'existant et analyse du besoin.</li>
-                    <li>Élaboration d'un MCD et d'un schéma de base de données.</li>
-                    <li>Mise en place d'un MVP (Java, Spring Boot, Angular, TypeScript) pour le service médical d'entreprise.</li>
+                    <li>Analyse des besoins du service médical et modélisation de la base de données.</li>
+                    <li>Développement d’un MVP pour gérer les dossiers patients, les consultations, les ordonnances et les stocks de pharmacie.</li>
                 </ul>
-            </div>
+            </article>
+            <article class="experience">
+                <h3>Développement applicatif — Univers Numérique Services (UNS)</h3>
+                <p class="meta">2025 · Remote · Entreprise basée à Pointe-Noire, Congo</p>
+                <p><strong>Technologies</strong> Java, Angular (SPA), TypeScript, Bootstrap</p>
+                <ul>
+                    <li>Développement d’une application d’inventaire du parc électronique par marque, type, date d’entrée et état initial.</li>
+                    <li>Mise en place d’alertes de contrôle ou de remplacement selon le type d’appareil.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="projets">
+            <h2>Projets académiques</h2>
+            <article class="project">
+                <h3>DevOps et CI/CD — Infrastructure cloud et déploiement automatisé</h3>
+                <p class="meta">2026</p>
+                <p><strong>Technologies</strong> OpenTofu, OVH, MySQL, DNS, Ansible, Docker, Traefik, GitLab CI/CD, OpenBao, Vue.js, Java</p>
+                <p>Provisionnement de l’infrastructure, construction d’images Docker et automatisation du déploiement. Gestion des secrets avec OpenBao.</p>
+            </article>
+
+            <article class="project">
+                <h3>Middleware et microservices — Synchronisation d’emplois du temps</h3>
+                <p class="meta">2026</p>
+                <p><strong>Technologies</strong> Go, API REST, Swagger, NATS JetStream, SQLite, iCal</p>
+                <p>Synchronisation de calendriers iCal et génération d’alertes. Communication asynchrone entre microservices et traitements en arrière-plan avec un planificateur et des consommateurs.</p>
+                <a class="github-link" href="https://github.com/RandomUserLt/PROJET-MIDDLEWARE">Voir le code source sur GitHub</a>
+            </article>
+
+            <article class="project">
+                <h3>Back-end Java — API REST pour une plateforme de dons</h3>
+                <p class="meta">2026</p>
+                <p><strong>Technologies</strong> Java, Spring Boot, Spring Security, H2</p>
+                <p>API de consultation des annonces, structurée en couches avec des DTO.</p>
+            </article>
+
+            <article class="project">
+                <h3>Stream processing — Traitement de transactions avec Apache Kafka</h3>
+                <p class="meta">2026</p>
+                <p><strong>Technologies</strong> Apache Kafka, Kafka Streams, SQL</p>
+                <p>Validation sur 600 transactions en mode exactly-once et écritures idempotentes en base via UPSERT.</p>
+            </article>
+
+            <article class="project">
+                <h3>Développement web et mobile — Application d’écoute de podcasts</h3>
+                <p class="meta">Depuis 2026 · En cours</p>
+                <p><strong>Technologies</strong> Java, Angular</p>
+                <p>Projet CAAS de développement d’une application d’écoute de podcasts sur le web et sur mobile.</p>
+            </article>
+
+            <article class="project">
+                <h3>Qualité logicielle — Refactoring d’une application Java</h3>
+                <p class="meta">2025</p>
+                <p><strong>Technologies</strong> Java, Git, TDD, JaCoCo, PIT</p>
+                <p>Refactoring et ajout de fonctionnalités en TDD. Suivi de la couverture des tests unitaires avec JaCoCo et tests de mutation avec PIT.</p>
+                <a class="github-link" href="https://github.com/RandomUserLt/PROJET-GENIE-LOGICIEL-REFACTORING-ET-INTEGRATIONS-DE-NOUVELLES-FONCTIONNALITES">Voir le code source sur GitHub</a>
+            </article>
+
+            <article class="project">
+                <h3>Recherche opérationnelle — Optimisation du pic de puissance</h3>
+                <p class="meta">2026</p>
+                <p><strong>Technologies</strong> Python, PuLP, CBC, OR-Tools</p>
+                <p>Modélisation d’une ligne d’assemblage. Le modèle exact a réduit le pic de puissance de 15 à 31 % par rapport à l’heuristique sur les instances étudiées.</p>
+            </article>
+
+            <article class="project">
+                <h3>Analyse de données — Données sur la pêche</h3>
+                <p class="meta">2026</p>
+                <p><strong>Technologies</strong> R</p>
+                <p>Analyse d’un jeu de données sur la pêche.</p>
+            </article>
+
+            <article class="project">
+                <h3>Réseaux et protocoles — Transfert de messages par encodage visuel</h3>
+                <p class="meta">2025</p>
+                <p>Mise en place d’un protocole de transfert de messages par encodage graphique inspiré des codes QR.</p>
+            </article>
+
+            <article class="project">
+                <h3>Langages et compilation — Grammaire pour les nombres complexes</h3>
+                <p class="meta">2025</p>
+                <p><strong>Technologies</strong> ANTLR</p>
+                <p>Écriture d’une grammaire pour analyser des expressions contenant des nombres complexes.</p>
+            </article>
+
+            <article class="project">
+                <h3>Programmation bas niveau — Enregistrement et recherche de données</h3>
+                <p class="meta">2025</p>
+                <p><strong>Technologies</strong> Assembleur</p>
+                <p>Écriture d’un programme pour enregistrer et retrouver des éléments dans une base de données.</p>
+            </article>
+
+            <article class="project">
+                <h3>Complexité algorithmique — 3-SAT et problèmes de graphes</h3>
+                <p class="meta">2024</p>
+                <p><strong>Technologies</strong> Python, SageMath</p>
+                <p>Étude de réductions polynomiales du 3-SAT vers des problèmes de graphes.</p>
+            </article>
+
+            <article class="project">
+                <h3>Développement front-end — Site web côté client</h3>
+                <p class="meta">2023</p>
+                <p><strong>Technologies</strong> HTML, CSS, JavaScript</p>
+                <p>Création d’un site web côté client.</p>
+            </article>
+
+            <article class="project">
+                <h3>Développement Java et SQL — Jeu de la vie de Conway</h3>
+                <p class="meta">2023</p>
+                <p><strong>Technologies</strong> Java, SQL</p>
+                <p>Implémentation du Jeu de la vie avec une interface graphique et une gestion des données en SQL.</p>
+            </article>
+
+            <article class="project">
+                <h3>Cryptographie appliquée — Comparaison de mécanismes</h3>
+                <p class="meta">2023</p>
+                <p><strong>Technologies</strong> Python</p>
+                <p>Implémentation et comparaison de plusieurs mécanismes cryptographiques.</p>
+            </article>
+
+            <article class="project">
+                <h3>Modélisation et simulation — Reproduction animale</h3>
+                <p class="meta">2023</p>
+                <p><strong>Technologies</strong> C</p>
+                <p>Simulation de la reproduction d’une population animale à partir de la suite de Fibonacci.</p>
+            </article>
+
+            <article class="project">
+                <h3>Développement de jeux vidéo — Ping-pong</h3>
+                <p class="meta">2023</p>
+                <p><strong>Technologies</strong> Unity, C#</p>
+                <p>Développement d’un jeu de ping-pong sous Unity.</p>
+            </article>
+
+            <article class="project">
+                <h3>Programmation de jeux — Sokoban</h3>
+                <p class="meta">2023</p>
+                <p><strong>Technologies</strong> C, Java</p>
+                <p>Réalisation de deux implémentations de Sokoban, l’une en C et l’autre en Java.</p>
+            </article>
         </section>
 
         <section id="formation">
-            <h2>Formation & Langues</h2>
+            <h2>Formation et langues</h2>
             <ul>
-                <li><strong>2025-Présent :</strong> Master Informatique (Génie Logiciel et Intégration d'Applications) - UCA-INP-ISIMA, Clermont-Ferrand (63).</li>
-                <li><strong>2021-2025 :</strong> Licence Informatique - Université Clermont Auvergne, Clermont-Ferrand (63).</li>
-                <li><strong>2019-2021 :</strong> BTS Gestion de la PME (GPME) - Académie de Créteil (94).</li>
-                <li><strong>Anglais :</strong> Niveau B2 (Compréhension technique et conversationnelle).</li>
+                <li><strong>Depuis 2025</strong> — Master Informatique, parcours GLIA, Université Clermont Auvergne / ISIMA. M1 validé, M2 en cours.</li>
+                <li><strong>2021–2025</strong> — Licence Informatique, Université Clermont Auvergne.</li>
+                <li><strong>2019–2021</strong> — BTS Gestion de la PME, académie de Créteil.</li>
+                <li><strong>Anglais</strong> — Niveau B2.</li>
             </ul>
+        </section>
+
+        <section id="mobilite">
+            <h2>Mobilité géographique</h2>
+            <p>Principalement mobile en <strong>Île-de-France</strong> et en <strong>Auvergne-Rhône-Alpes</strong>. Mobilité possible dans le reste de la France et à l’international selon les opportunités.</p>
         </section>
 
         <section id="interets">
-            <h2>Centres d'intérêt</h2>
+            <h2>Centres d’intérêt</h2>
             <ul>
-                <li><strong>Création numérique et graphique :</strong> Modélisation 3D (Blender) et dessin.</li>
-                <li><strong>Sport :</strong> Natation et salle de sport.</li>
+                <li>Modélisation 3D avec Blender et dessin.</li>
+                <li>Natation et salle de sport.</li>
             </ul>
         </section>
-    </div>
+    </main>
 
     <footer>
-        <p>Contact : <a href="mailto:e.mboudo@gmail.com">e.mboudo@gmail.com</a> | +33 07 66 58 48 99</p>
-        <p><a href="https://www.linkedin.com/in/emmanuelle-m-a138a1195?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B0zVWzaW6Qv21yCsNrMrCiA%3D%3D" target="_blank">LinkedIn</a> | <a href="https://randomuserlt.github.io/" target="_blank">GitHub</a></p>
+        <p><a href="mailto:emmanuelle.mboudo@outlook.fr">emmanuelle.mboudo@outlook.fr</a> · <a href="tel:+33766584899">+33 7 66 58 48 99</a></p>
+        <p><a href="https://www.linkedin.com/in/emmanuelle-m-a138a1195/">LinkedIn</a> · <a href="https://github.com/RandomUserLt">GitHub</a></p>
     </footer>
-
 </body>
 </html>
